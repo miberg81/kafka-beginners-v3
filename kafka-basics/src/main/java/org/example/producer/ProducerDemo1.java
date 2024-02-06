@@ -1,4 +1,4 @@
-package org.example;
+package org.example.producer;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -8,11 +8,14 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
-public class ProducerDemo {
+public class ProducerDemo1 {
     private static final Logger log =
-            LoggerFactory.getLogger(ProducerDemo.class.getSimpleName());
+            LoggerFactory.getLogger(ProducerDemo1.class.getSimpleName());
     public static void main(String[] args) {
+        log.info("I'm a kafka Producer");
+
         Properties properties = new Properties();
+
         // connect to kafka on localhost
         //properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
 
